@@ -3,11 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "treclone": {
+    "angular-template": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "changeDetection": "OnPush",
+          "viewEncapsulation": "None"
         },
         "@schematics/angular:application": {
           "strict": true
@@ -20,7 +22,7 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/treclone",
+            "outputPath": "dist/angular-template",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +73,18 @@
         "serve": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "treclone:build"
+            "browserTarget": "angular-template:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "treclone:build:production"
+              "browserTarget": "angular-template:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "treclone:build"
+            "browserTarget": "angular-template:build"
           }
         },
         "lint": {
@@ -97,5 +99,5 @@
       }
     }
   },
-  "defaultProject": "treclone"
+  "defaultProject": "angular-template"
 }

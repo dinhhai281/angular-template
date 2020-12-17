@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'treclone',
+  name: 'angular-template',
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/jest-setup.ts'],
   testPathIgnorePatterns: [
