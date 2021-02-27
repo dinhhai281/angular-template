@@ -1,1 +1,5 @@
 <div class="text-pink-400">{{ title$ | ngrxPush }}</div>
+<div *ngrxLet="testIvyLanguageService$ as test">
+  <!-- Should be able to infer type -->
+  <p>{{ test }}</p>
+</div>

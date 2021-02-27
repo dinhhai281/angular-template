@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
-import { BehaviorSubject, of } from 'rxjs';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,8 @@ import { BehaviorSubject, of } from 'rxjs';
 })
 export class AppComponent {
   title$ = of('angular-template');
+  testIvyLanguageService$ = of({
+    a: 'aaa',
+    b: 'bbb',
+  });
 }
